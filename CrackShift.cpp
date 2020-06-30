@@ -94,8 +94,6 @@ vector<int> CrackShift::find_length_key() {
 		
 		for (int i = 2; i <= this->ctext.size(); i++) {
 			int del = this->ctext.size() % i;
-			//Ограничили размер ключа, т.к. длина ключа более 12 дает
-			//очень много перестановок
 			if ((del == 0) and (i <= 12)) 
 				length_key.push_back(i);
 		}
